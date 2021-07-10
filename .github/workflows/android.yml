@@ -19,8 +19,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        repository: Fuzion24/JustTrustMe
     - name: set up JDK 8
       uses: actions/setup-java@v2
       with:
