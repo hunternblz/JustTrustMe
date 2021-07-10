@@ -29,7 +29,7 @@ jobs:
       run: chmod +x gradlew
     - name: Support mips64el
       run: |
-        wget https://dl.google.com/android/repository/android-ndk-r17c-linux-x86_64.zip
+        curl -O https://dl.google.com/android/repository/android-ndk-r17c-linux-x86_64.zip
         unzip android-ndk-r17c-linux-x86_64.zip
         cp android-ndk-r17c/toolchains/mips64el-linux-android-4.9 $ANDROID_NDK_HOME/toolchains
     - name: SSH connection to Actions
