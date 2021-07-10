@@ -40,9 +40,7 @@ jobs:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Upload apk to release
-      uses: softprops/action-gh-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/upload-artifact@v2
       with:
-        files: app/build/outputs/apk/*
+        name: my-artifact
+        path: app/build/outputs/apk
