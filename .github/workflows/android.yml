@@ -31,7 +31,7 @@ jobs:
       run: |
         curl -O https://dl.google.com/android/repository/android-ndk-r17c-linux-x86_64.zip
         unzip -q android-ndk-r17c-linux-x86_64.zip
-        cp android-ndk-r17c/toolchains/mips64el-linux-android-4.9 $ANDROID_NDK_HOME/toolchains
+        cp -r android-ndk-r17c/toolchains/mips64el-linux-android-4.9 $ANDROID_NDK_HOME/toolchains/mips64el-linux-android-4.9
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
